@@ -8,11 +8,14 @@ Each case folder contains its own exercices.
 - Skaffold installed
 
 # Way to use:
-For most case, Skaffolg gives hint about the root cause or it is quite clear in the configuration file. So it is better to use a shell to run the skaffold command starting the application and to do the troubleshooting on an other shell.
+Each case contains a README file explaining how to start the appliation and how to try to solve the issue.
 
 # Exercices
 ## Case 1
 ImagePullBackOff due to wrong image reference
 
 ## Case 2
-Pending pod due to wrong resource request.
+Pending pod due to wrong resource request
+
+## Case 3
+Wrong service's selector

@@ -1,0 +1,19 @@
+apiVersion: skaffold/v2beta11
+kind: Config
+metadata:
+  name: reference
+build:
+  artifacts:
+  - image: cheddar
+    context: source
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - conf.yaml
+portForward:
+  - resourceType: Service
+    resourceName: case-3
+    port: 80
+    localPort: 9003
