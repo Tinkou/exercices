@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: case-2
+  labels:
+    app: case-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: case-2
+  template:
+    metadata:
+      labels:
+        app: case-2
+    spec:
+      containers:
+      - image: cheddar
+        imagePullPolicy: IfNotPresent
+        name: cheese
+        resources:
+          requests:
+            memory: 200G
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: case-2
+  name: case-2
+spec:
+  type: ClusterIP
+  selector:
+    app: case-2
+  ports:
+  - port: 80
+    protocol: TCP
