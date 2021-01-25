@@ -6,4 +6,4 @@ Application can be run with command:
 Application should be displayed on localhost:9002
 
 # Exercice:
-The application is not working. Using kubectl edit to correct the configuration to be able to see the cheese.
+The application is not working. Using kubectl edit, correct the configuration to be able to see the cheese.
